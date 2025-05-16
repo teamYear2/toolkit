@@ -1,18 +1,40 @@
 # Evidencia 2 - Toolkit de administración de procesos
+#!/bin/bash
 
+# Función que muestra el menú principal
+mostrar_menu() {
+    clear
+    echo "-------------------------------------"
+    echo "       Menú Principal - Toolkit"
+    echo "-------------------------------------"
+    echo "1. Ver procesos en ejecución"
+    echo "2. Información detallada de un proceso"
+    echo "3. Enviar señal (kill) a un proceso"
+    echo "4. Salir"
+    echo "-------------------------------------"
+}
 
-: <<'COMENTARIO'
+# Función que lee la opción del usuario
+leer_opcion() {
+    read -p "Seleccione una opción: " opcion
+}
 
-Desarrollar el script principal del toolkit (main_toolkit.sh) que muestre un menú
-inicial (aún con opciones limitadas a lo que se implemente en esta evidencia).
-Crear un script (procesos.sh) invocado desde el menú principal que implemente
-las siguientes funcionalidades:
-● Muestre los procesos en ejecución (similar a ps aux o top de forma
-simplificada y estática).
-● Permita al usuario ingresar un PID y muestre información detallada de ese
-proceso (usando, por ejemplo, ps -p <PID>).
-● Permita enviar una señal (ej. SIGTERM) a un proceso por su PID (con
-confirmación al usuario antes de ejecutar el comando kill).
-● Utilice comandos como ps, top (en modo batch), pgrep, kill.
+# Llamar al script 'procesos.sh' con el parámetro adecuado
+procesar_opcion() {
+    case $1 in
+        1) bash procesos.sh ver_procesos ;;
+        2) bash procesos.sh info_proceso ;;
+        3) bash procesos.sh matar_proceso ;;
+        4) echo "Saliendo..."; exit 0 ;;
+        *) echo "Opción no válida." ;;
+    esac
+}
 
-COMENTARIO
+# Bucle principal
+while true; do
+    mostrar_menu
+    leer_opcion
+    procesar_opcion $opcion
+    echo
+    read -p "Presione una tecla para continuar..." -n 1 -s
+done
