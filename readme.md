@@ -1,7 +1,7 @@
 # 🛠️ Toolkit de Procesos en Bash
 Este proyecto es un menú interactivo en Bash que permite gestionar procesos en ejecución en un sistema Linux. Es ideal para estudiantes, administradores de sistemas o cualquier persona que quiera practicar scripting en Bash y manejo de procesos.
 
-<figure><img src="blob:https://web.whatsapp.com/c367f678-eb9f-4c25-999d-a33f7f393edc" alt="logo" style="height: 300px;"></figure>
+<figure><img src="menu.png" alt="logo" style="height: 300px;"></figure>
 
 
 ## 📂 Estructura del proyecto
