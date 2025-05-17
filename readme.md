@@ -31,6 +31,9 @@ Desde el menú principal podrás:
 #### Matar un proceso
 - Permite ingresar el PID de un proceso y finalizarlo con kill -9.
 
+#### Crear archivo
+- Permite ingresar el PID de un proceso y finalizarlo con kill -9.
+
 - Salir de la app. 
 
 
