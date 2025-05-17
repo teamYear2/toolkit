@@ -82,7 +82,7 @@ case $1 in
     info_proceso) info_proceso;;
     matar_proceso) matar_proceso;;
     crear_archivo) crear_archivo;;
-    buscar_proceso) buscar_proceso_por_nombre ;;
+    buscar_proceso_por_nombre) buscar_proceso_por_nombre ;;
     ver_memoria) ver_memoria;;
     *) echo "Opción inválida desde procesos.sh" ;;
 esac
