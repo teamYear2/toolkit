@@ -1,4 +1,3 @@
-# Evidencia 2 - Toolkit de administración de procesos
 #!/bin/bash
 
 # Función que muestra el menú principal
