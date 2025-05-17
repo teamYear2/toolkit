@@ -68,6 +68,12 @@ buscar_proceso_por_nombre() {
     echo "Procesos encontrados con el nombre '$nombre':"
     pgrep -l "$nombre" || echo "⚠️ No se encontraron procesos con ese nombre."
     echo "----------------------------------------"
+
+ver_memoria() {
+    clear
+    echo "===== USO DE MEMORIA (RAM / SWAP) ====="
+    free -h
+    echo "========================================"
 }
 
 case $1 in
@@ -76,5 +82,6 @@ case $1 in
     matar_proceso) matar_proceso;;
     crear_archivo) crear_archivo;;
     buscar_proceso) buscar_proceso_por_nombre ;;
+    ver_memoria) ver_memoria;;
     *) echo "Opción inválida desde procesos.sh" ;;
 esac

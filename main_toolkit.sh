@@ -11,7 +11,8 @@ mostrar_menu() {
     echo "2. Información detallada de un proceso"
     echo "3. Enviar señal (kill) a un proceso"
     echo "4. Crear archivo"
-    echo "5. Salir"
+    echo "5. Ver uso de memoria RAM y SWAP"
+    echo "6. Salir"
     echo "-------------------------------------"
 }
 
@@ -27,7 +28,8 @@ procesar_opcion() {
         2) bash procesos.sh info_proceso ;;
         3) bash procesos.sh matar_proceso ;;
         4) bash procesos.sh crear_archivo ;;
-        5) echo "Saliendo..."; exit 0 ;;
+        5) bash procesos.sh ver_memoria ;;
+        6) echo "Saliendo..."; exit 0 ;;
         *) echo "Opción no válida." ;;
     esac
 }

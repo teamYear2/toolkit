@@ -34,6 +34,9 @@ Desde el menú principal podrás:
 #### Crear archivo
 - Permite crear un archivo indicando nombre y extensión requerida.
 
+#### Visualizar informacion de la memoria RAM y SWAP
+- Ver memoria en uso actual.
+
 - Salir de la app. 
 
 
