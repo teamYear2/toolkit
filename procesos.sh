@@ -61,10 +61,20 @@ crear_archivo() {
     fi
 }
 
+# Función para buscar procesos por nombre usando pgrep
+buscar_proceso_por_nombre() {
+    read -p "Ingrese el nombre del proceso a buscar: " nombre
+    echo "----------------------------------------"
+    echo "Procesos encontrados con el nombre '$nombre':"
+    pgrep -l "$nombre" || echo "⚠️ No se encontraron procesos con ese nombre."
+    echo "----------------------------------------"
+}
+
 case $1 in
     ver_procesos) ver_procesos ;;
     info_proceso) info_proceso;;
     matar_proceso) matar_proceso;;
     crear_archivo) crear_archivo;;
+    buscar_proceso) buscar_proceso_por_nombre ;;
     *) echo "Opción inválida desde procesos.sh" ;;
 esac
