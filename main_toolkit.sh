@@ -10,7 +10,8 @@ mostrar_menu() {
     echo "1. Ver procesos en ejecución"
     echo "2. Información detallada de un proceso"
     echo "3. Enviar señal (kill) a un proceso"
-    echo "4. Salir"
+    echo "4. Crear archivo"
+    echo "5. Salir"
     echo "-------------------------------------"
 }
 
@@ -25,7 +26,8 @@ procesar_opcion() {
         1) bash procesos.sh ver_procesos ;;
         2) bash procesos.sh info_proceso ;;
         3) bash procesos.sh matar_proceso ;;
-        4) echo "Saliendo..."; exit 0 ;;
+        4) bash procesos.sh crear_archivo ;;
+        5) echo "Saliendo..."; exit 0 ;;
         *) echo "Opción no válida." ;;
     esac
 }

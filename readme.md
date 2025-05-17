@@ -32,7 +32,7 @@ Desde el menú principal podrás:
 - Permite ingresar el PID de un proceso y finalizarlo con kill -9.
 
 #### Crear archivo
-- Permite ingresar el PID de un proceso y finalizarlo con kill -9.
+- Permite crear un archivo indicando nombre y extensión requerida.
 
 - Salir de la app. 
 
@@ -56,4 +56,8 @@ Podés usar este proyecto como base para:
 - Practicar control de procesos.
 
 - Se recomienda ejecutarlo en una máquina virtual si vas a experimentar con procesos reales.
+
+- Es posible que surjan errores al ejecutar el programa por problemas de "Finales de línea" comunes cuando se programa en windows y se ejecuta en Linux o viceversa. Para solucionar esto una buena opción es usar "dos2unix" en tu sistema Linux sobre el archivo problemático. 
+Se instala con:  sudo apt install dos2unix
+Se ejecuta sobre cada archivo por ej: dos2unix procesos.sh
 

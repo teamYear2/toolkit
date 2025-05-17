@@ -30,9 +30,41 @@ matar_proceso() {
     fi
 }
 
+crear_archivo() {
+    echo "Ingrese el nombre del archivo sin su extensión:"
+    read nombre
+
+    if [[ -z "$nombre" || ${#nombre} -lt 3 ]]; then 
+        echo "El nombre del archivo no puede estar vacío ni tener menos de 3 letras."
+        return
+    else 
+        echo "Nombre del archivo guardado correctamente: $nombre"
+    fi
+
+    echo "Ingrese la extensión del archivo (Por ej: sh, txt, py, etc):"
+    read extension 
+
+    if [[ -z "$extension" || ${#extension} -lt 2 ]]; then 
+        echo "La extensión no puede estar vacía y debe tener al menos 2 caracteres."
+        return
+    else 
+        echo "La extensión del archivo se guardó correctamente: $extension"
+    fi
+
+    archivo="${nombre}.${extension}"
+
+    if [[ -e "$archivo" ]]; then
+        echo "El archivo '$archivo' ya existe. No se creó uno nuevo."
+    else
+        touch "$archivo"
+        echo "Archivo '$archivo' creado exitosamente."
+    fi
+}
+
 case $1 in
     ver_procesos) ver_procesos ;;
     info_proceso) info_proceso;;
     matar_proceso) matar_proceso;;
+    crear_archivo) crear_archivo;;
     *) echo "Opción inválida desde procesos.sh" ;;
 esac
