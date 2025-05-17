@@ -68,6 +68,7 @@ buscar_proceso_por_nombre() {
     echo "Procesos encontrados con el nombre '$nombre':"
     pgrep -l "$nombre" || echo "⚠️ No se encontraron procesos con ese nombre."
     echo "----------------------------------------"
+}
 
 ver_memoria() {
     clear
