@@ -61,10 +61,18 @@ crear_archivo() {
     fi
 }
 
+ver_memoria() {
+    clear
+    echo "===== USO DE MEMORIA (RAM / SWAP) ====="
+    free -h
+    echo "========================================"
+}
+
 case $1 in
     ver_procesos) ver_procesos ;;
     info_proceso) info_proceso;;
     matar_proceso) matar_proceso;;
     crear_archivo) crear_archivo;;
+    ver_memoria) ver_memoria;;
     *) echo "Opción inválida desde procesos.sh" ;;
 esac
