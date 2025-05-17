@@ -34,6 +34,9 @@ Desde el menú principal podrás:
 #### Crear archivo
 - Permite crear un archivo indicando nombre y extensión requerida.
 
+#### Buscar proceso por nombre
+- Busca y lista procesos activos que coincidan con el nombre o parte del nombre ingresado. Usa pgrep para mostrar PID y nombre.
+ 
 #### Visualizar informacion de la memoria RAM y SWAP
 - Ver memoria en uso actual.
 
