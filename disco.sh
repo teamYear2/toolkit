@@ -29,7 +29,7 @@ mostrar_menu_disco() {
 
 ver_uso_disco() {
     echo "[Función de Nahuel: Mostrar uso del disco con df -h]"
-    # Implementar
+    df -h | awk 'NR==1 || /^\/dev\//'
 }
 
 ver_tamano_ruta() {
