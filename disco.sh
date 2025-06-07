@@ -33,8 +33,14 @@ ver_uso_disco() {
 }
 
 ver_tamano_ruta() {
-    echo "[Función de Adriel: Mostrar tamaño de ruta con du -sh]"
-    # Implementar
+    read -p "Introduce la ruta del archivo o directorio: " ruta
+# Verificar si la ruta existe
+if [ -e "$ruta" ]; then
+    # Mostrar el tamaño ocupado
+    du -sh "$ruta"
+else
+    echo "Error: La ruta especificada no existe."
+fi
 }
 
 listar_archivos_directorio() {
