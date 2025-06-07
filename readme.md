@@ -44,7 +44,7 @@ Desde el menú principal podrás:
 - Muestra información detallada desde `/proc/meminfo`.
 - Visualiza estadísticas de bajo nivel con `vmstat`, útil para análisis del rendimiento del sistema.
 
-### Módulo de Disco
+#### Módulo de Disco
 - Ver el uso del disco con df -h, para saber cuánto espacio libre y usado hay en cada partición montada.
 
 - Consultar el tamaño de un archivo o carpeta específica usando du -sh <ruta>.
