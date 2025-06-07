@@ -44,7 +44,7 @@ listar_archivos_directorio() {
     read -p "Ingrese la ruta del directorio que desea listar: " rutaUsuario
        # Verificar si la ruta existe y es un directorio
     if [ -d "$ruta" ]; then
-        echo -e "\nArchivos en '$ruta':"
+        echo -e "\nArchivos en '$rutaUsuario':"
         ls -l "$ruta"
     else
         echo "La ruta ingresada no es un directorio válido."
