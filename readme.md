@@ -8,6 +8,8 @@ Este proyecto es un <strong> menú interactivo</strong> en Bash que permite gest
 - System
 - ├── main_toolkit.sh      # Script principal con el menú
 - ├── procesos.sh          # Script que gestiona los procesos según la opción elegida
+- ├── memoria.sh           # Script que gestiona la memoria según la opción elegida
+- ├── disco.               # Script que gestiona el disco según la opción elegida
 - └── README.md            # Documentación del proyecto
 
 ## 🚀 ¿Cómo ejecutar este proyecto?
