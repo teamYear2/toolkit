@@ -9,7 +9,7 @@ Este proyecto es un <strong> menú interactivo</strong> en Bash que permite gest
 - ├── main_toolkit.sh      # Script principal con el menú
 - ├── procesos.sh          # Script que gestiona los procesos según la opción elegida
 - ├── memoria.sh           # Script que gestiona la memoria según la opción elegida
-- ├── disco.               # Script que gestiona el disco según la opción elegida
+- ├── disco.sh             # Script que gestiona el disco según la opción elegida
 - └── README.md            # Documentación del proyecto
 
 ## 🚀 ¿Cómo ejecutar este proyecto?
@@ -39,10 +39,19 @@ Desde el menú principal podrás:
 #### Buscar proceso por nombre
 - Busca y lista procesos activos que coincidan con el nombre o parte del nombre ingresado. Usa pgrep para mostrar PID y nombre.
  
-#### Visualizar informacion de la memoria RAM y SWAP
-- Ver memoria en uso actual.
+#### Módulo de Memoria
+- Muestra el uso de memoria RAM y SWAP con `free -h`.
+- Muestra información detallada desde `/proc/meminfo`.
+- Visualiza estadísticas de bajo nivel con `vmstat`, útil para análisis del rendimiento del sistema.
 
-- Salir de la app. 
+### Módulo de Disco
+- Ver el uso del disco con df -h, para saber cuánto espacio libre y usado hay en cada partición montada.
+
+- Consultar el tamaño de un archivo o carpeta específica usando du -sh <ruta>.
+
+- Listar archivos y permisos de un directorio con ls -l <directorio>.
+
+### Salir de la app. 
 
 
 ## ✅ Requisitos
