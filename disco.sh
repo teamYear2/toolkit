@@ -38,14 +38,16 @@ ver_tamano_ruta() {
 }
 
 listar_archivos_directorio() {
-        echo "📁 Listar archivos de un directorio con sus permisos"
-    read -p "Ingrese la ruta del directorio que desea listar: " ruta
-
+       # Mostrar mensaje inicial para el usuario
+        echo "Listar archivos de un directorio con sus permisos"
+       # Pedir la ruta al usuario
+    read -p "Ingrese la ruta del directorio que desea listar: " rutaUsuario
+       # Verificar si la ruta existe y es un directorio
     if [ -d "$ruta" ]; then
         echo -e "\nArchivos en '$ruta':"
         ls -l "$ruta"
     else
-        echo "❌ La ruta ingresada no es un directorio válido."
+        echo "La ruta ingresada no es un directorio válido."
     fi
 }
 
