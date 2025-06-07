@@ -38,8 +38,15 @@ ver_tamano_ruta() {
 }
 
 listar_archivos_directorio() {
-    echo "[Función de Caro: Listar archivos con permisos usando ls -l]"
-    # Implementar
+        echo "📁 Listar archivos de un directorio con sus permisos"
+    read -p "Ingrese la ruta del directorio que desea listar: " ruta
+
+    if [ -d "$ruta" ]; then
+        echo -e "\nArchivos en '$ruta':"
+        ls -l "$ruta"
+    else
+        echo "❌ La ruta ingresada no es un directorio válido."
+    fi
 }
 
 # Ejecutar el menú
