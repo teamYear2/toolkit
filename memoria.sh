@@ -15,18 +15,18 @@ mostrar_menu_memoria() {
         clear
         echo "------ Módulo de la Memoria ------"
         echo "1. Ver uso de la memoria"
-        echo "2. Ver memoria virtual"
-        echo "3. Ver estadisticas de uso del sistema"
-        echo "4. Informacion detallada de memoria"
+        echo "2. Ver estadisticas de uso del sistema"
+        echo "3. Informacion detallada de memoria (10 lineas)"
+        echo "4. Informacion detallada de memoria (completa)"
         echo "5. Volver al menú principal"
         echo "-----------------------------"
         read -p "Seleccione una opción: " opcion
 
         case $opcion in
             1) ver_uso_memoria ;;
-            2) ver_memoria_virtual ;;
-            3) ver_estadisticas_sistema ;;
-            4) info_detallada_memoria ;;
+            2) ver_estadisticas_sistema ;;
+            3) info_detallada_memoria ;;
+            4) info_detallada_memoria_cat ;;
             5) break ;;
             *) echo "⚠️ Opción no válida. Intente nuevamente."; sleep 2 ;;
         esac
@@ -45,23 +45,25 @@ ver_uso_memoria() {
 	echo "========================================"
 }
 
-ver_memoria_virtual() {
-    clear
-    echo "===== /proc/meminfo ====="
-    echo "-------------------------"
-    head -n 10 /proc/meminfo
-    echo
-    echo "vmstat (5 muestras cada 1 segundo):"
-    echo "-----------------------------------"
-    vmstat 1 5
-}
-
 ver_estadisticas_sistema() {
-    :
+    clear
+	echo "===== ESTADÍSTICAS DE SISTEMA (vmstat 1 5) ====="
+	vmstat 1 5
+	echo "========================================"
 }
 
 info_detallada_memoria() {
-    :  
+    clear
+	echo "===== INFORMACIÓN DETALLADA DE MEMORIA (/proc/meminfo) ====="
+	head -n 10 /proc/meminfo
+	echo "========================================"
+}
+
+info_detallada_memoria_cat() {
+    clear
+	echo "===== INFORMACIÓN DETALLADA DE MEMORIA (/proc/meminfo) ====="
+	cat /proc/meminfo
+	echo "========================================"
 }
 
 # Ejecutar el menú
